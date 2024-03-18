@@ -1,4 +1,14 @@
-<div class="p-2 border-2 shadow">
-    <h5>{{ item.title }}</h5>
-    <p>{{ item.description }}</p>
+<div class="bg-white overflow-hidden rounded shadow-md">
+    <div class="group/item bg-gray-300 flex justify-end cursor-pointer">
+        <button mat-icon-button color="accent"
+                class="group/edit opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible transition duration-150"
+        >
+            <mat-icon>close</mat-icon>
+        </button>
+
+    </div>
+    <div class="pb-4 pt-2 px-4">
+        <h5 class="font-bold">{{ item.title }}</h5>
+        <p *ngIf="!!item.description" class="mt-2">{{ item.description }}</p>
+    </div>
 </div>

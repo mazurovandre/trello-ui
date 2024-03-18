@@ -2,13 +2,19 @@ import { Component } from '@angular/core';
 import { ITask, TaskStatus } from "../task/task.interface";
 import { NgForOf } from "@angular/common";
 import { TaskComponent } from "../task/task.component";
+import { MatGridList, MatGridTile, MatGridTileText } from "@angular/material/grid-list";
+import { AddTaskComponent } from "../add-task/add-task.component";
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
   imports: [
     NgForOf,
-    TaskComponent
+    TaskComponent,
+    MatGridList,
+    MatGridTile,
+    MatGridTileText,
+    AddTaskComponent
   ],
   templateUrl: './task-list.component.html'
 })
