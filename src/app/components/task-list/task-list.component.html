@@ -1,0 +1,10 @@
+<div class="flex px-5">
+    <div class="flex grow flex-col gap-2 px-2">
+        <h3 class="text-center mb-2">New</h3>
+        <app-task *ngFor="let item of newTasks" [item]="item"></app-task>
+    </div>
+    <div class="flex grow flex-col gap-2 px-2">
+        <h3 class="text-center mb-2">Done</h3>
+        <app-task *ngFor="let item of doneTasks" [item]="item"></app-task>
+    </div>
+</div>
