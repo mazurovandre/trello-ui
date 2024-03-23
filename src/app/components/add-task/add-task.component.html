@@ -1,4 +1,26 @@
-<div class="bg-white overflow-hidden rounded shadow-md h-[100px]">
-    <div class="py-2 px-4">
-    </div>
-</div>
+<form class="bg-white overflow-hidden rounded shadow-md flex flex-col p-3"
+      (ngSubmit)="submitForm()"
+      [formGroup]="myForm"
+>
+    <mat-form-field class="example-full-width">
+        <mat-label>Add task</mat-label>
+        <input
+                matInput
+                formControlName="title"
+                required
+        >
+        <mat-error *ngIf="myForm.controls['title'].invalid">
+            First Name is required
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Add description (not required)</mat-label>
+        <textarea
+                matInput
+                formControlName="description"
+        ></textarea>
+    </mat-form-field>
+
+    <button mat-button color="primary">Add task</button>
+</form>
